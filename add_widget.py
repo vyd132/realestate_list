@@ -10,14 +10,22 @@ class AddWidget(QWidget,ui_realestate_form.Ui_Form):
         self.setupUi(self)
         self.on_ok=on_ok
         self.okbutton.clicked.connect(self.new_row_add)
+        self.cancel_button.clicked.connect(self.close)
+        self.id=None
 
     def new_ad_window_open(self):
+        self.name_edit.setText('')
         self.show()
 
 
 
+    def row_edit(self,name,id):
+        self.name_edit.setText(name)
+        self.id=id
+        self.show()
+
 
     def new_row_add(self):
-        self.on_ok(self.name_edit.text())
-        self.name_edit.setText('')
+        self.on_ok(self.name_edit.text(),self.id)
+        self.id=None
         self.close()

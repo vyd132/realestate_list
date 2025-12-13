@@ -61,9 +61,9 @@ class Ui_Form(object):
         self.okbutton = QPushButton(Form)
         self.okbutton.setObjectName(u"okbutton")
         self.okbutton.setGeometry(QRect(540, 570, 80, 24))
-        self.pushButton_2 = QPushButton(Form)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(650, 570, 80, 24))
+        self.cancel_button = QPushButton(Form)
+        self.cancel_button.setObjectName(u"cancel_button")
+        self.cancel_button.setGeometry(QRect(650, 570, 80, 24))
 
         self.retranslateUi(Form)
 
@@ -82,6 +82,6 @@ class Ui_Form(object):
         self.radioButton_2.setText(QCoreApplication.translate("Form", u"\u0416\u0438\u043b\u043e\u0435", None))
         self.radioButton.setText(QCoreApplication.translate("Form", u"\u041a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435", None))
         self.okbutton.setText(QCoreApplication.translate("Form", u"\u041e\u043a", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u041e\u0442\u043c\u0435\u043d\u0430", None))
+        self.cancel_button.setText(QCoreApplication.translate("Form", u"\u041e\u0442\u043c\u0435\u043d\u0430", None))
     # retranslateUi
 
