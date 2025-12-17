@@ -15,17 +15,25 @@ class AddWidget(QWidget,ui_realestate_form.Ui_Form):
 
     def new_ad_window_open(self):
         self.name_edit.setText('')
+        self.address_edit.setText('')
+        self.value_box.setValue(0)
+        self.actuality_box.setChecked(True)
+        self.description_edit.setText('')
         self.show()
 
 
 
-    def row_edit(self,name,id):
+    def row_edit(self,name,id,address,cost,check,description):
         self.name_edit.setText(name)
+        self.address_edit.setText(address)
+        self.value_box.setValue(cost)
+        self.actuality_box.setChecked(check)
+        self.description_edit.setText(description)
         self.id=id
         self.show()
 
 
     def new_row_add(self):
-        self.on_ok(self.name_edit.text(),self.id)
+        self.on_ok(self.name_edit.text(),self.id,self.address_edit.text(),self.value_box.value(),self.actuality_box.isChecked(),self.description_edit.toPlainText())
         self.id=None
         self.close()
